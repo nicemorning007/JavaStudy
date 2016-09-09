@@ -3,11 +3,11 @@ package javast;
 public class J03 {
 	public static void main(String[] args){
 		int a[]={25,24,12,76,101,96,28};
-		System.out.println("原数组：");
+		System.out.println("鍘熸暟缁勶細");
 		for (int i = 0; i < a.length; i++) {
 			System.out.print(" "+a[i]);
 		}
-		System.out.println("冒泡排序后：");
+		System.out.println("鎺掑簭鍚庯細");
 		for (int i = 0; i < a.length; i++) {
 			for (int j = 0; j < a.length; j++) {
 				if (a[i]>=a[j]) {
