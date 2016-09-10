@@ -7,6 +7,7 @@ public class J03 {
 		for (int i = 0; i < a.length; i++) {
 			System.out.print(" "+a[i]);
 		}
+		System.out.println(""); 
 		System.out.println("排序后：");
 		for (int i = 0; i < a.length; i++) {
 			for (int j = 0; j < a.length; j++) {
