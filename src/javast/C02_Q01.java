@@ -1,6 +1,6 @@
 package javast;
 
-public class J01 {
+public class C02_Q01 {
 
 	public static void main(String[] args) {
 		int sum = 0;

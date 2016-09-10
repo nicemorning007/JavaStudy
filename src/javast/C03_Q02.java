@@ -11,7 +11,7 @@ class Father {
 	}
 }
 
-public class J05 {
+public class C03_Q02 {
 
 	public static void main(String[] args) {
 		Child Child1=new Father().new Child();

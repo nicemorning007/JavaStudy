@@ -1,8 +1,9 @@
 package javast;
 
-public class J06 {
+public class C04_Q01 {
 
 	public static void main(String[] args) {
 	}
 
 }
+	

@@ -20,7 +20,7 @@ class Student{
 	}
 }
 
-public class J04 {
+public class C03_Q01 {
 
 	public static void main(String[] args) {
 		Student Stu1 = new Student();

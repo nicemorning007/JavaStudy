@@ -1,6 +1,6 @@
 package javast;
 
-public class J03 {
+public class C02_Q03 {
 	public static void main(String[] args){
 		int a[]={25,24,12,76,101,96,28};
 		System.out.println("原数组：");
