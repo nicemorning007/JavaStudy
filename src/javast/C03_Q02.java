@@ -4,9 +4,10 @@ import javast.Father.Child;
 
 class Father {
 	private String name = "Zhang_Jun";
-	class Child{
+
+	class Child {
 		public void introFather() {
-			System.out.println("Father`s name is "+name);
+			System.out.println("Father`s name is " + name);
 		}
 	}
 }
@@ -14,7 +15,7 @@ class Father {
 public class C03_Q02 {
 
 	public static void main(String[] args) {
-		Child Child1=new Father().new Child();
+		Child Child1 = new Father().new Child();
 		Child1.introFather();
 	}
 
