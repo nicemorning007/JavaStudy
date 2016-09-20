@@ -6,9 +6,7 @@ import java.util.Map.*;
 class MyComparator implements Comparator<String> {
 
 	public int compare(String o1, String o2) {
-		String str1 = o1;
-		String str2 = o2;
-		return str2.compareTo(str1);
+		return o2.compareTo(o1);
 	}
 
 }
@@ -21,15 +19,14 @@ public class C07_Q03 {
 		treeMap.put("3", "Smith");
 		treeMap.put("4", "Aimee");
 		treeMap.put("5", "Amanda");
-		System.out.println("排序前: " + treeMap);
 		Set<Entry<String, String>> eSet = treeMap.entrySet();// 获取键集合
 		Iterator<Entry<String, String>> iterator = eSet.iterator();// 获取Iterator对象
 		System.out.print("排序后： ");
 		while (iterator.hasNext()) {
 			Map.Entry<String, String> entry = (Map.Entry<String, String>) (iterator.next());// 强制转换
 			Object key = entry.getKey();
-			System.out.print(treeMap.get(key)+" ");
+			System.out.print(treeMap.get(key) + " ");
 		}
-		
+
 	}
 }
