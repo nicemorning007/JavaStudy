@@ -1,16 +1,23 @@
 package javast;
 
 import java.util.*;
+
 public class C07_Q01 {
 	public static void main(String[] args) {
-		ArrayList list = new ArrayList(); 
-		for(int i = 0; i < 10; i++) {		 
-			list.add("A"+i);
+		ArrayList<String> list = new ArrayList<>();
+		list.add("No.1");
+		list.add("No.2");
+		list.add("No.3");
+		list.add("No.4");
+		list.add("No.5");
+		list.add("No.6");
+		list.add("No.7");
+		list.add("No.8");
+		list.add("No.9");
+		list.add("No.10");
+		Iterator<String> iterator = list.iterator();
+		while (iterator.hasNext()) {
+			System.out.println(iterator.next());
 		}
-		Iterator it = list.iterator();		 
-		while(it.hasNext()) {		           
-			Object obj = it.next();	         
-			System.out.println(obj);			
-		}	
 	}
 }

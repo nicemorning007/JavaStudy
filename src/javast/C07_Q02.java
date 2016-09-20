@@ -1,38 +1,50 @@
 package javast;
 
 import java.util.*;
-public class C07_Q02 {
-	public static void main(String[] args) {
-		HashSet hashSet = new HashSet();
-		Person p1 = new Person("Jack",25);
-		Person p2 = new Person("Rose",23);
-		Person p3 = new Person("Jack",27);
-		hashSet.add(p1);
-		hashSet.add(p2);
-		hashSet.add(p3);
-		for(Object obj:hashSet){
-			Person p=(Person)obj;
-			System.out.println(p.name+":"+p.age);
+
+class Person {
+	public String name;
+	public int age;
+
+	public Person(String n, int a) {
+		this.name = n;
+		this.age = a;
+	}
+
+	public int hashCode() {
+		// 返回name的哈希值
+		return name.hashCode();
+	}
+
+	public boolean equals(Object obj) {
+		// 判断是否为Person对象
+		if (this == obj) {
+			return true;
 		}
+		if (!(obj instanceof Person)) {
+			return false;
+		}
+		// 将非Person类强制转换为Person类并判断name的值是否相同
+		Person person = (Person) obj;
+		boolean b = this.name.equals(person.name);
+		return b;
+	}
+	public String toString() {
+		return name+" "+age;
 	}
 }
-class Person{
-	String name;
-	int age;
-	public Person(String name, int age) {
-		super();
-		this.name = name;
-		this.age = age;
-	}
-	public int hashCode() {
-	   return name.hashCode();
-	}
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		Person other = (Person) obj;
-		return other.name.equals(this.name);
+
+public class C07_Q02 {
+	public static void main(String[] args) {
+		HashSet<Person> hashSet = new HashSet<>();
+		Person person1 = new Person("Li_hua", 21);
+		Person person2 = new Person("Zhang_jie", 22);
+		Person person3 = new Person("Chen_Yixun", 46);
+		Person person4 = new Person("Chen_Yixun", 40);
+		hashSet.add(person1);
+		hashSet.add(person2);
+		hashSet.add(person3);
+		hashSet.add(person4);
+		System.out.println(hashSet);
 	}
 }

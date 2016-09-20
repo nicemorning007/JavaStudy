@@ -1,23 +1,35 @@
 package javast;
 
 import java.util.*;
+import java.util.Map.*;
+
+class MyComparator implements Comparator<String> {
+
+	public int compare(String o1, String o2) {
+		String str1 = o1;
+		String str2 = o2;
+		return str2.compareTo(str1);
+	}
+
+}
+
 public class C07_Q03 {
 	public static void main(String[] args) {
-		TreeMap map = new TreeMap(new MyComparator());
-		map.put("1", "Lucy");
-		map.put("2", "Lucy");
-		map.put("3", "John");
-		map.put("4", "Smith");
-		map.put("5", "Amanda");
-		for (Object key : map.keySet()) {
-			System.out.println(key + ":" + map.get(key));
+		TreeMap<String, String> treeMap = new TreeMap<String, String>(new MyComparator());
+		treeMap.put("1", "Lucy");
+		treeMap.put("2", "John");
+		treeMap.put("3", "Smith");
+		treeMap.put("4", "Aimee");
+		treeMap.put("5", "Amanda");
+		System.out.println("排序前: " + treeMap);
+		Set<Entry<String, String>> eSet = treeMap.entrySet();// 获取键集合
+		Iterator<Entry<String, String>> iterator = eSet.iterator();// 获取Iterator对象
+		System.out.print("排序后： ");
+		while (iterator.hasNext()) {
+			Map.Entry<String, String> entry = (Map.Entry<String, String>) (iterator.next());// 强制转换
+			Object key = entry.getKey();
+			System.out.print(treeMap.get(key)+" ");
 		}
-	}
-}
-class MyComparator implements Comparator {
-	public int compare(Object obj1, Object obj2) {
-		String ele1 = (String) obj1;
-		String ele2 = (String) obj2;
-		return ele2.compareTo(ele1);
+		
 	}
 }
