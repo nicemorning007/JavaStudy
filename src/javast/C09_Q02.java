@@ -16,7 +16,7 @@ import javax.swing.JTextArea;
 public class C09_Q02 {
 
 	public static void main(String[] args) {
-		JFrame jFrame = new JFrame("=_=");
+		JFrame jFrame = new JFrame("今晚干什么");
 		jFrame.setSize(500, 300);
 		jFrame.setLocation(700, 400);
 
@@ -29,9 +29,9 @@ public class C09_Q02 {
 		JTextArea jTextArea = new JTextArea("", 15, 30);
 		jTextArea.setEditable(true);
 
-		JCheckBox jCheckBoxb = new JCheckBox("羽毛球");
-		JCheckBox jCheckBoxp = new JCheckBox("乒乓球");
-		JCheckBox jCheckBoxs = new JCheckBox("长歌");
+		JCheckBox jCheckBoxb = new JCheckBox("吃宵夜");
+		JCheckBox jCheckBoxp = new JCheckBox("喝糖水");
+		JCheckBox jCheckBoxs = new JCheckBox("约师妹");
 
 		JLabel jLabel = new JLabel("Habbit");
 		JPanel jPanel = new JPanel();
@@ -46,13 +46,13 @@ public class C09_Q02 {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				if (jCheckBoxb.isSelected()) {
-					jTextArea.append("羽毛球  ");
+					jTextArea.append("吃宵夜  ");
 				}
 				if (jCheckBoxp.isSelected()) {
-					jTextArea.append("乒乓球  ");
+					jTextArea.append("喝糖水  ");
 				}
 				if (jCheckBoxs.isSelected()) {
-					jTextArea.append("长歌  ");
+					jTextArea.append("约师妹  ");
 				}
 				if (jRadioButtonfemale.isSelected()) {
 					jTextArea.append("女  ");
