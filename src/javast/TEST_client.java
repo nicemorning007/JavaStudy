@@ -15,7 +15,7 @@ class Client {
 	final int PORT = 7788;
 
 	public void connect() throws Exception {
-		Socket client = new Socket("127.0.0.1", 7788);
+		Socket client = new Socket("120.85.128.28", 7788);
 		InputStream inputStream = client.getInputStream();
 		byte[] bs = new byte[1024];
 		int len = inputStream.read(bs);
