@@ -9,11 +9,6 @@ class MyThread_1 extends Thread{
 	}
 }   
 
-
-/*
- * 父类构造方法重写.
- */
-
 public class C05_Q01_b {
 
 	public static void main(String[] args) {
