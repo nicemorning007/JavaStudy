@@ -2,15 +2,15 @@ package javast;
 
 import java.io.NotActiveException;
 
-class NoThisSoundException extends Exception {
+class SoundsDoesEixtException extends Exception {
 
 	private static final long serialVersionUID = 1L;
 
-	public NoThisSoundException() {
+	public SoundsDoesEixtException() {
 		super();
 	}
 
-	public NoThisSoundException(String id) {
+	public SoundsDoesEixtException(String id) {
 		super(id);
 	}
 }
